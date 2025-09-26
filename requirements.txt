@@ -1,0 +1,4 @@
+prompt_toolkit==3.0.51
+google-genai==1.26.0
+python-dotenv==1.1.1
+nltk==3.9.1
