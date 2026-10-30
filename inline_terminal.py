@@ -430,6 +430,16 @@ while True:
                                 print("Y/N?")
                                 execute_command_confirmation = input("Do you Want to Continue with Above List of Commands??(Y/N): ")
 
+                            #CHECKING THE AI GENERATED COMMAND IS DANGEROUS OR NOT
+                            if execute_command_confirmation.lower() == "y" and is_dangerous(combined_command):
+                                print("POTENTIAL DANGEROUS COMMAND!!")
+                                print("###")
+                                print("###")
+                                execute_command_confirmation = input("Do you want to Continue with the command?(Y/N): ")
+                                while execute_command_confirmation.lower() not in ['y', 'n']:
+                                    print("Y/N?")
+                                    execute_command_confirmation = input("Do you want to Continue with the command?(Y/N): ")
+
                             if execute_command_confirmation.lower() == "y":
                                 print(f"Executing: {combined_command}")
                                 try:
